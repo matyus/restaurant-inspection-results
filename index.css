@@ -1,0 +1,131 @@
+body {
+  color: #222;
+  background-color: lightgray;
+  box-sizing: border-box;
+  font-family: 'helvetica neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+#app {
+  background-color: white;
+  max-width: 484px;
+  margin: auto;
+  padding: 20px 40px 45px;
+}
+
+#search {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+input[type="search"] {
+    border-radius: 100px;
+    vertical-align: middle;
+    padding: 7px;
+    font-size: 0.9em;
+}
+
+input[type="search"]:focus {
+  border-color: royalblue;
+  outline: 0;
+  box-shadow: 0 0 3px royalblue;
+}
+
+#search-results {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 1.6em;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin: 0;
+}
+
+label {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dba {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.street,
+.date,
+.cuisine {
+  opacity: .4;
+}
+
+.street {
+  font-size: .7em;
+  line-height: 2;
+  letter-spacing: .1em;
+}
+
+.grade {
+  color: lightgray;
+  margin: .5em;
+}
+
+.grade.a {
+  color: royalblue;
+}
+
+.grade.b {
+  color: forestgreen;
+}
+
+.grade.c {
+  color: orange;
+}
+
+.description {
+  margin: 5px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media all and (min-width: 1200px) {
+  #app {
+    max-width: none;
+  }
+
+  h1 {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  #search {
+    float: right;
+    margin: 30px 30px 0;
+  }
+
+  li {
+    width: 484px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+}

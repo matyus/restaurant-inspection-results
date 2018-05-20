@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/node_modules/moment/min/moment.min.js"></script>
+    <script async src="index.js"></script>
+    <title>DOHMH New York City Restaurant Inspection Results</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="fullscreen">
+    <main id="app">
+      <h1>DOHMH New York City Restaurant Inspection Results</h1>
+
+      <form id="search">
+        <label>
+          ZIP Code
+          <input type="search" name="zipcode" />
+        </label>
+      </form>
+
+      <hr />
+
+      <div id="search-results">
+        <p>Search by ZIP Code.</p>
+      </div>
+
+      <hr />
+
+      <footer>
+        <h3>Reference:</h3>
+        <p>
+        <a href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/rs6k-p7g6">NYC OpenData</a> (<a href="https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/xx67-kt59">Spreadsheet</a>)<br/>
+          <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/9w7m-hzhe">SOCRATA</a><br/>
+          <a href="https://www1.nyc.gov/site/doh/business/food-operators/letter-grading-for-restaurants.page">Letter grading for restaurants</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
