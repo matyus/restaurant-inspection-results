@@ -8,25 +8,33 @@ function handleJSON(json) {
     list.removeChild(list.firstChild);
   }
 
-  for (var index = 0; index < json.length; index++) {
-    var dba = json[index].dba;
-    var cuisine = json[index].cuisine_description;
-    var violation = json[index].violation_description;
-    var inspectionDate = json[index].inspection_date;
-    var grade = json[index].grade;
-    var street = json[index].street;
-    var boro = json[index].boro;
+  if (json.length == 0) {
 
-    var listItem = document.createElement('li');
+    resultsList.append('No results found.');
 
-    listItem.innerHTML = `
-      <p class="dba" title="${cuisine}"><strong>${dba} ${grade ? `<span class="grade ${grade.toLowerCase()}">${grade}</span>` : ''}</strong> <span class="cuisine">${cuisine}</span></p>
-      <p><span class="date">${moment(inspectionDate).format('LL')}</span></p>
-      <p class="description">${violation ? violation.replace(/Â/g,'') : json[index].action}</p>
-      <p class="street">${street}, ${boro}</p>
-    `;
+  } else {
 
-    resultsList.append(listItem);
+    for (var index = 0; index < json.length; index++) {
+      var dba = json[index].dba;
+      var cuisine = json[index].cuisine_description;
+      var violation = json[index].violation_description;
+      var inspectionDate = json[index].inspection_date;
+      var grade = json[index].grade;
+      var street = json[index].street;
+      var boro = json[index].boro;
+
+      var listItem = document.createElement('li');
+
+      listItem.innerHTML = `
+        <p class="dba" title="${cuisine}"><strong>${dba} ${grade ? `<span class="grade ${grade.toLowerCase()}">${grade}</span>` : ''}</strong> <span class="cuisine">${cuisine}</span></p>
+        <p><span class="date">${moment(inspectionDate).format('LL')}</span></p>
+        <p class="description">${violation ? violation.replace(/Â/g,'') : json[index].action}</p>
+        <p class="street">${street}, ${boro}</p>
+      `;
+
+      resultsList.append(listItem);
+    }
+
   }
 
   list.append(resultsList);
