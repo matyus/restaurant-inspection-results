@@ -36,6 +36,6 @@ Here is what the search results look like:
 
 ## Reference
 - [NYC OpenData](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/rs6k-p7g6) ([Spreadsheet](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/xx67-kt59))
-- [SCORATA](https://dev.socrata.com/foundry/data.cityofnewyork.us/9w7m-hzhe)
+- [SOCRATA](https://dev.socrata.com/foundry/data.cityofnewyork.us/9w7m-hzhe)
 - [Letter grading for restaurants](https://www1.nyc.gov/site/doh/business/food-operators/letter-grading-for-restaurants.page)
 
